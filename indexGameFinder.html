@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Finder App</title>
+    <!--TO DO: SEO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/stylesGameFinder.css"/>
+</head>
+
+<body>
+    <header>
+        <img src="https://i.ibb.co/YQHSXJX/GAMEFINDER.png" alt="GameFinder logo" class="logoDark">
+            
+            <input type="text" placeholder="Search games..." class="searchBar">
+
+        
+        <p class="logOut">Log out</p>
+        <img src="https://i.ibb.co/mzQ72jB/1625836683188.jpg" alt="User's picture" class="userImg">
+    </header>
+
+    <div class="heading">
+        <h2>New and trending</h2>
+        <p>Based on player counts and realease date</p>
+    </div>
+
+    <nav class="sidebar">
+        <ul>
+            <div class="nav1">
+                <li class="bold">Home</li>
+                <li class="bold">Reviews</li>
+                <li class="bold">New Releases</li>
+            </div>
+            <div class="nav2">
+                <li class="star">This week</li>
+                <li class="calendar">This month</li>
+                <li class="clock">Coming soon</li>
+            </div>
+            <div class="nav3">
+                <li class="bold">Popular</li>
+                <li class="glass">Last searches</li>
+                <li class="thumbs">Best of the year</li>
+            </div>
+        </ul>
+    </nav>
+
+    <main class="flex"></main>
+
+    <template id="card">
+        <article class="card">
+            <div class="cardPicture">
+                <img src="#" alt="Game's front image" class="gamePicture">
+                <img class="heart" src="#"></img>
+            </div>
+
+            <div class="cardTitle">
+                <p class="title">Game title</p>
+                <p class="number">#1</p>
+            </div>
+            
+            <div class="cardRelease">
+                <p class="releaseDate">Release date:</p>
+                <p class="releaseData">Jan 01, 2000</p>
+                <div class="platforms">
+                    <img class="platform" src="https://via.placeholder.com/20"></i>
+                    <img class="platform" src="https://via.placeholder.com/20"></i>
+                    <img class="platform" src="https://via.placeholder.com/20"></i>
+                    <img class="platform" src="https://via.placeholder.com/20"></i>
+                    <img class="platform" src="https://via.placeholder.com/20"></i>
+                </div>
+            </div>
+        
+            <div class="cardGenre">
+                <p class="genre">Genre:</p>
+                <p class="genreData">Genre, genre</p>
+            </div>
+
+        </article>  
+    </template>
+    
+    <script src="./js/app.js"></script>
+</body>
+</html>

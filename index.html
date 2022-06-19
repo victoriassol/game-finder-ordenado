@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<header>
+    <img src="https://i.ibb.co/YQHSXJX/GAMEFINDER.png" alt="GameFinder" class="logo">
+</header>
+<div class="carrousel">
+    <button class="carrouselButton carrouselButton--left">
+        <img src="https://i.ibb.co/VHyWxpZ/left.png" alt="">
+    </button>
+    <div class="carrouselTrackContainer">
+        <ul class="carrouselTrack">
+            <li class="carrouselSlide currentSlide">
+                <img class="carrouselImg" src="https://i.ibb.co/jbrbTVY/1.jpg" alt="">
+            </li>
+            <li class="carrouselSlide">
+                <img class="carrouselImg" src="https://i.ibb.co/dKgYtw5/3.jpg" alt=""></li>
+            <li class="carrouselSlide">
+                <img class="carrouselImg" src="https://i.ibb.co/n3FdwvV/4.jpg" alt="">
+            </li>
+            <li class="carrouselSlide">
+                <img class="carrouselImg" src="https://i.ibb.co/ckjhYNM/5.jpg" alt="">
+            </li>
+            <li class="carrouselSlide">
+                <img class="carrouselImg" src="https://i.ibb.co/qpdfSRg/2.jpg" alt="">
+            </li>
+            <li class="carrouselSlide">
+                <img class="carrouselImg" src="https://i.ibb.co/hM8y2XW/6.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <button class="carrouselButton carrouselButton--right">
+        <img src="https://i.ibb.co/7vqG97R/right.png" alt="">
+    </button>
+    <div class="carrouselNav">
+        <button class="carrouselIndicator currentSlide"></button>
+        <button class="carrouselIndicator"></button>
+        <button class="carrouselIndicator"></button>
+        <button class="carrouselIndicator"></button>
+        <button class="carrouselIndicator"></button>
+        <button class="carrouselIndicator"></button>
+    </div>
+</div>
+
+<div class="login">
+    <h2>Welcome! Log in or register</h2>
+    <p>Log in to find the games you’re looking for!</p>
+    <form id="signup" class="login-form">
+        <div class="form-field">
+            <input class="login-inputxt" type="text" id="email" name="email" placeholder="Email">
+            <small></small>
+        </div>
+        <div class="form-field">
+            <input class="login-inputxt" type="password" id="password" name="password" placeholder="Password">
+            <small></small>
+        </div>
+          
+        <div class="remb-me"><label for="remember-me"><input type="checkbox" id="remember-me"/>Remember me</label>
+        <a id="forgot-psw" href="#">Forgot password?</a></div>
+        <div class="form-field">
+            <input id="submit-btn" type="submit" value="Log in">
+        </div>
+        
+        <span class="register">Not registered yet? <a href="#" id="reg-now">Register now</a></span>
+        <br>
+
+        <div class="hrorhr"><hr id="hr1"><span>or</span><hr id="hr2"></div>
+        <button class="login-with"><img class="login-with-img" src="https://i.ibb.co/4MZWyFd/F.png" alt="Facebook logo">Login with Facebook</button>
+        <button class="login-with"><img class="login-with-img" src="https://i.ibb.co/Fnd9Kp0/T.png" alt="Twitter logo">Login with Twitter</button>
+        <button class="login-with"><img class="login-with-img" src="https://i.ibb.co/fDJzNJg/G.png" alt="Google logo">Login with Google</button>
+    </form>        
+</div>
+
+<div class="snackBar snackBar--invalidCred">
+    Sorry! Invalid credentials
+</div>
+<div class="snackBar snackBar--noConect">
+    Cannot connect to the server
+</div>
+
+
+<script src="./js/script.js"></script>
+</body>
+</html>

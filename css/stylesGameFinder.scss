@@ -1,0 +1,238 @@
+$color-light: #FFFFFF;
+$color-accent: #4CC986;
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    position: fixed;
+    z-index: 1;
+    display:flex;
+    width: 100%;
+    height: 5.875rem;
+    background: linear-gradient(180deg, #5FE19B 0%, #36B972 50%, #0EA152 100%);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoDark{
+    width: 16.694rem;
+    position: absolute;
+    left: 3%;
+}
+
+body{
+    background-color: #151515;
+    color: $color-light;
+}
+
+.logOut{
+    font-size: 0.938rem;
+    position: absolute;
+    left: 88%;
+}
+
+.userImg{
+    position: absolute;
+    left: 93%;
+    border-radius: 50%; 
+    width: 3rem;
+    height: 3rem;
+}
+
+.searchBar{
+    width: 22.625rem;
+    height: 2.938rem;
+    border-radius: 4px;
+    border-style: hidden;
+    background-image: url(https://i.ibb.co/0QvR4xC/Vector.png);
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    text-indent: 35px;
+}
+
+.main-div{
+    margin: 0 3%;
+}
+
+.heading{
+    position: fixed;
+    width:100%;
+    background-color: #151515;
+    z-index: 1;
+    margin-top: 6.5%;
+    margin-left: 3%;
+    
+    p{padding-bottom: 1rem;}
+}
+h2{
+    font-size: 3rem;
+    font-family: 'Exo', sans-serif;
+    font-weight: 800;
+    padding-top:1rem;
+}
+
+p{
+    font-size: 1.125rem;
+    margin-top: 0.5em;
+    font-family: 'Exo', sans-serif;
+    font-weight: 400;
+}
+
+
+.sidebar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 24%;
+    width: 15%;
+    margin-left: 3%;
+}
+
+.nav1, .nav2, .nav3{
+    font-size: 1.25rem;
+}
+.nav1{
+    padding-bottom: 1em;
+}
+.nav2{
+    padding-bottom: 1.4em;
+}
+
+ul{
+    list-style-type: none;
+}
+li{
+    padding: 0.5rem 0;
+    font-size: 1.125rem;
+    font-family: 'Exo', sans-serif;
+    font-weight: 400;
+}
+.bold{
+    font-size: 1.25rem;
+    font-family: 'Exo', sans-serif;
+    font-weight: 700;
+}
+.star::before{
+    content: url(https://i.ibb.co/xqcWbzP/Vector.png);
+    padding-right: 0.6rem;
+}
+.calendar::before{
+    content: url(https://i.ibb.co/H4PqF5N/Vector-1.pngg);
+    padding-right: 0.6rem;
+}
+.clock::before{
+    content: url(https://i.ibb.co/dMs4V2g/Vector-2.png);
+    padding-right: 0.6rem;
+}
+.glass::before{
+    content: url(https://i.ibb.co/4Wqkc7J/Vector-3.png);
+    padding-right: 0.6rem;
+}
+.thumbs::before{
+    content: url(https://i.ibb.co/cwSvjwd/Vector-4.png);
+    padding-right: 0.6rem;
+}
+
+main{
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    left: 18%;
+    top: 24%;
+}
+//CARDS
+.card{
+    display: grid;
+    grid-template-rows: 5fr 3fr 0.5fr 0.5fr;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-areas: 
+    "picture picture picture picture"
+    "title title title number"
+    "release releaseData releaseData platforms"
+    "genre genreData genreData genreData"
+;
+
+    width: 22.688rem;
+    background-color: #303030;
+    color: #FFFFFF;
+    border-radius: 10px;
+    height: 19.625rem;
+    overflow: scroll;
+}
+
+.gamePicture{
+    border-radius: 7px;
+    width: 22.688rem;
+    height: 11.907rem;
+}
+.cardPicture{
+    width: 100%;
+    height: 190px;
+    grid-area: picture;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-family: 'Exo', sans-serif;
+    font-weight: 700;
+    grid-area: title;
+    margin-left: 1rem;
+    padding: 2rem auto 2rem auto;
+}
+.number{
+    grid-area: number;
+
+}
+.cardTitle{
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.releaseDate {
+    font-size: 0.875rem;
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+    color: #939393;
+    grid-area: release;
+    margin-left: 1rem;
+    margin-top: 1rem; 
+}
+
+.genreData, .releaseData{
+    font-family: 'Exo', sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.genreData{
+    grid-area: genreData;
+}
+.releaseData{
+    grid-area: releaseData;
+    margin-top: 1rem; 
+}
+.number{
+    font-family: 'Exo', sans-serif;
+    font-weight: 700;
+    color:#36B972;
+    justify-self: flex-end;
+    margin-right:1rem;
+}
+.genre{
+	grid-area: genre;
+    font-size: 0.875rem;
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+    color: #939393;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    align-self: flex-end 
+}
+
+.platforms{
+    grid-area: platforms;
+    justify-self: flex-end;
+}

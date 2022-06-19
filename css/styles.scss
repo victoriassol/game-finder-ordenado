@@ -1,0 +1,251 @@
+@mixin expandToContainer
+{width: 100%;
+align-self: center;
+padding: 1.5rem;
+height: 2.3rem;}
+
+$color-light: #FFFFFF;
+$color-accent: #4CC986;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.carrousel {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.carrouselImg{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carrouselTrackContainer{
+    height: 100%;
+    position: relative;
+}
+.carrouselTrack{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 400ms ease-in
+}
+.carrouselSlide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carrouselButton{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+
+}
+.carrouselButton--left{
+    z-index: 1;
+    left: 2rem;
+    cursor: pointer;
+}
+.carrouselButton--right{
+    right: 2rem;
+    cursor: pointer;
+}
+.carrouselNav{
+    position: absolute;
+    background: #515151;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    padding: 5px 15px;
+    border-radius: 18px;
+}
+.carrouselIndicator{
+    border: 0;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background: #FFFFFF;
+    opacity: 0.25;
+    margin: 5px;
+    cursor: pointer;
+}
+.currentSlide{
+    opacity: 1;
+}
+
+.logo{position: absolute; 
+    top: 3em;
+    left: 3em;
+    z-index: 1;}
+
+body{background-color: gray;
+margin: 0;
+padding: 0;
+overflow: hidden;}
+
+.login{
+position: absolute;
+display:flex;
+flex-direction: column;
+text-align: center;
+background-color: rgba(0,0,0,0.5);
+width: 28.875rem;
+padding: 3em;
+color: $color-light;
+border-radius: 12px;
+right: 6em;
+top: 7em;}
+
+.login-with{@include expandToContainer;
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 700;
+    margin: 0.6rem auto;
+    border-radius: 5px;
+    border-color: $color-light;
+    color: $color-light;
+    background-color: transparent;
+    font-size: 1.125rem;
+    display: inline-flex;    
+    align-items: center;
+    justify-content: center;
+    }
+    
+.login-inputxt{@include expandToContainer;
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    margin: 0.5rem auto;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 27.5rem;
+}
+#submit-btn{@include expandToContainer;
+    background-color: $color-accent;
+    color: $color-light;
+    font-family: 'Exo';
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 1rem auto 1rem auto;
+    border-radius: 5px;
+    border-style: none;
+    line-height: 0.3rem;
+    }
+
+.login-with-img{margin: 0.5rem}
+
+h2{font-family: 'Exo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 1em auto auto auto;
+}
+p{font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+margin: 0.8rem auto 1.7rem auto;}
+    
+.remb-me{display: flex;
+    justify-content: space-between;
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    padding: 0.2rem;
+}
+#forgot-psw{font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: $color-accent}
+.register{display: inline-block;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    padding:1em;}
+span{font-size: 0.875rem}
+.hrorhr{display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.6rem auto;
+    align-items: center;
+    margin: 1.5rem auto;}
+hr{width: 13rem;
+    background-color: $color-light;
+    height: 0.2px;
+    display: inline-block;
+    position: relative;}
+#reg-now{color: $color-accent;}
+#password{background-image: url("https://i.ibb.co/vZT50TH/Vector.png");
+background-repeat: no-repeat;
+background-position-x: right;
+background-position-y: center;}
+
+small{
+    color: red;
+    font-family: 'Exo';
+    
+}
+
+.snackBar{
+    visibility: hidden; 
+    min-width: 250px; 
+    margin-left: -125px; 
+    background-color: rgb(212, 30, 30);
+    color: #fff;
+    font-family: 'Exo';
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+    border: solid 5px;
+    border-color: rgb(231, 6, 6);
+    padding: 16px;
+    position: fixed;
+    z-index: 1; 
+    left: 50%;
+    bottom: 40px;
+}
+
+.snackBar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
